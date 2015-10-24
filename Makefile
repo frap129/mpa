@@ -13,7 +13,8 @@ endif
 .PHONY: clean mpa debug install
 
 clean:
-  rm -f mpa mpa-debug
+  rm -f mpa
+  rm -f mpa-debug
   
 mpa: 
   $(CC) mpa.c -O3 -g0 -o mpa
