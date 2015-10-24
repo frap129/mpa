@@ -16,5 +16,5 @@
 
    /* Patch Applier */
    system("find argv[1] -name '.patch' -print0 | xargs -0 patch -p1 <");
-   exit(0)
+   exit(0);
 }
