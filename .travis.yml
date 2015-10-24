@@ -1,5 +1,3 @@
 language: c
 script: make mpa
-compiler:
-  - clang
-  - gcc
+
