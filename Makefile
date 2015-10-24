@@ -4,13 +4,14 @@
 version := 0.1
 name    := Unorganized Walruscide
 
-ifndef BUILD_USE_CLANG
-  CC := gcc
+ifdef CC
+  CC := $CC
 else
-  CC:= clang
+  CC := gcc
 endif
 
 .PHONY: clean mpa debug install
+
 clean:
   rm -f mpa mpa-debug
   
