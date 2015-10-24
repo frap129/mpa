@@ -17,7 +17,7 @@
       printf("Using directory %s\n", argv[1]);
    }
     
-  char dir = argv[1]
+  char dir = argv[1];
    /* Patch Applier */
    system(find dir -name '.patch' -print0 | xargs -0 patch -p1 <);
    exit(0);
