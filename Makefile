@@ -7,30 +7,30 @@ name    := Unorganized Walruscide
 .PHONY: clean mpa debug install install-debug
 clean:
 	@rm -f mpa mpa-debug $<
-	echo "Build files removed!"
+	@echo "Build files removed!" $<
   
 mpa: 
-	echo "Compiling..."
-	echo ""
+	@echo "Compiling..." $<
+	@echo "" $<
 	@gcc mpa.c -O3 -g0 -o mpa $<
-	echo "Done! Final Binary: ./mpa"
+	@echo "Done! Final Binary: ./mpa" $<
   
 debug: 
-	echo "Compiling..."
-	echo ""
+	@echo "Compiling..." $<
+	@echo "" $<
 	@gcc mpa.c -g3 -Og -o mpa-debug $<
-	echo "Done! Final Binary: ./mpa-debug"
+	@echo "Done! Final Binary: ./mpa-debug" $<
 
 install:
-	echo "Installing.."
-	echo ""
+	@echo "Installing.." $<
+	@echo "" $<
 	@sudo mkdir -p /usr/local/bin $<
 	@sudo cp mpa /usr/bin/mpa $<
-	echo "Done!"
+	@echo "Done!" $<
 	
 install-debug:
-	echo "Installing..."
-	echo ""
+	@echo "Installing..." $<
+	@echo "" $<
 	@sudo mkdir -p /usr/local/bin $<
 	@sudo cp mpa-debug /usr/bin/mpa $<
-	echo "Done!"
+	@echo "Done!" $<
