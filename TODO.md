@@ -1,3 +1,3 @@
 TODO
 ====
-- Make recursive application an argument (-r)
+- Test many usecase scenarios
