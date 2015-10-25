@@ -24,7 +24,7 @@
    char * dir = argv[1];
    const char * args = " -name '.patch' -print0 | xargs -0 patch -p1";
    char mpa_patcher[MAX_CMD_LEN];
-   strcat(mpa_patcher, find);
+   strcpy(mpa_patcher, find);
    strcat(mpa_patcher, dir);
    strcat(mpa_patcher, args);
    system(mpa_patcher);
