@@ -4,7 +4,7 @@
 version := 0.1
 name    := Unorganized Walruscide
 
-.PHONY: clean mpa debug install
+.PHONY: clean mpa debug install install-debug
 clean:
 	rm -f mpa mpa-debug
   
@@ -17,3 +17,6 @@ debug:
 install:
 	sudo mkdir -p /usr/local/bin
 	sudo cp mpa /usr/bin/mpa
+install-debug:
+	sudo mkdir -p /usr/local/bin
+	sudo cp mpa-debug /usr/bin/mpa
