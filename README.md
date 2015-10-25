@@ -21,3 +21,8 @@ the directory of the source you want to patch, and run
 to apply all patch files in /patch/directory/ and all sub
 directories of /patch/directory/.
 
+What do I need to run mpa?
+--------------------------
+mpa has very few dependencies, and can be run on a very bare
+system. To compile, only GCC and Automake are needed. To run,
+GNU find, xargs, and patch are needed.
