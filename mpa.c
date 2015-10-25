@@ -28,6 +28,4 @@
    strcat(mpa_patcher, dir);
    strcat(mpa_patcher, args);
    system(mpa_patcher);
-   return 0;
-   exit(0);
 }
