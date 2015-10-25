@@ -7,7 +7,7 @@ name    := Unorganized Walruscide
 .PHONY: clean mpa debug install install-debug
 clean:
 	@rm -f mpa mpa-debug $<
-	echo "Build files removed!
+	echo "Build files removed!"
   
 mpa: 
 	echo "Compiling..."
