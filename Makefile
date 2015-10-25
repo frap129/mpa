@@ -1,8 +1,16 @@
 #########################
 ## Makefile for MPA
 #########################
-version := 0.1
+version := 0.2
 name    := Unorganized Walruscide
+
+# Environment Variables
+local_flags := $(CFLAGS) $(cflags)
+ifdef CC
+  local_cc := $(CC)
+else
+  local_cc := gcc
+endif
 
 .PHONY: clean mpa debug install install-debug
 clean:
@@ -12,13 +20,13 @@ clean:
 mpa: 
 	@echo "Compiling..." $<
 	@echo "" $<
-	@gcc mpa.c -O3 -g0 -o mpa $<
+	@$(local_cc) mpa.c -O3 -g0 $(local_flags) -o mpa $<
 	@echo "Done! Final Binary: ./mpa" $<
   
 debug: 
 	@echo "Compiling..." $<
 	@echo "" $<
-	@gcc mpa.c -g3 -Og -o mpa-debug $<
+	@$(local_cc) mpa.c -g3 -Og $(local_flags) -o mpa-debug $<
 	@echo "Done! Final Binary: ./mpa-debug" $<
 
 install:
