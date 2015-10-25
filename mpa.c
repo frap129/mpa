@@ -10,7 +10,7 @@
 {
  /* Argument Handling */
    if( argc > 3 ) {
-      printf("Too many arguments.\n Usage: mpa /patch/directory\n");
+      printf("Too many arguments.\n Usage: mpa /patch/directory [OPTIONS: -s (--solo: Do not search for patches recursively)]\n");
       exit(1);
    } else if( argc < 2 ) {
       printf("No directory defined.\n Usage: mpa /patch/directory [OPTIONS: -s (--solo: Do not search for patches recursively)]\n");
@@ -36,6 +36,7 @@
    int ret = system(mpa_patcher);
    if( ret == nada ) {
       return 1;
+      printf("Error code 1: No patch result");
       exit(1);
    } else {
       return 0;
