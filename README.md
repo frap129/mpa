@@ -1,6 +1,6 @@
 mpa - The Mass Patch Applier 
 ================================
-[![Build Status](https://travis-ci.org/frap129/mpa.svg?branch=master)](https://travis-ci.org/frap129/mpa)
+[![Build Status](https://travis-ci.org/frap129/mpa.svg?branch=0.2)](https://travis-ci.org/frap129/mpa)
 What is mpa?
 ------------
 mpa is a tool written in C, made for applying many patch files
