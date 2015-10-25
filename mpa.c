@@ -21,8 +21,8 @@
 
    /* Patch Applier */
    const char * find = "find ";
-   char * dir = argv[1];
-   const char * args = " -name '.patch' -print0 | xargs -0 patch -p1";
+   const char * dir = argv[1];
+   const char * args = " -name '*.patch' -print0 | xargs -0 patch -p1";
    char mpa_patcher[MAX_CMD_LEN];
    strcpy(mpa_patcher, find);
    strcat(mpa_patcher, dir);
