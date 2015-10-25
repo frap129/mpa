@@ -10,7 +10,7 @@
 {
  /* Argument Handling */
    if( argc > 3 ) {
-      printf("Too many arguments.\n ");
+      printf("Too many arguments.\n Usage: mpa /patch/directory\n");
       exit(1);
    } else if( argc < 2 ) {
       printf("No directory defined.\n Usage: mpa /patch/directory\n");
