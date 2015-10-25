@@ -13,12 +13,12 @@
       printf("Too many arguments.\n Usage: mpa /patch/directory\n");
       exit(1);
    } else if( argc < 2 ) {
-      printf("No directory defined.\n Usage: mpa /patch/directory\n");
+      printf("No directory defined.\n Usage: mpa /patch/directory [OPTIONS: -s (--solo: Do not search for patches recursively)]\n");
       exit(1);
    } else {
       printf("Using directory %s\n", argv[1]);
    }
-   const char * rflag = argv[2];
+   const char * sflag = argv[2];
    const char * nada;
 
    /* Patch Applier */
@@ -29,7 +29,7 @@
    char mpa_patcher[MAX_CMD_LEN];
    strcpy(mpa_patcher, find);
    strcat(mpa_patcher, dir);
-   if( rflag ==  nada ){
+   if( sflag !=  nada ){
       strcat(mpa_patcher, maxdepth);
    }
    strcat(mpa_patcher, args);
