@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
   const char* dir = argv[1];
   const char* args = " -name '*.patch' -print0 | xargs -0 patch -p1";
   const char* maxdepth = " -maxdepth 1";
-  char mpa_patcher[MAX_CMD_LEN];
+  char* mpa_patcher[MAX_CMD_LEN];
 
     /* Concatenate strings to form main command */
   strcpy(mpa_patcher, find);
